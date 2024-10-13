@@ -1,0 +1,23 @@
+Las pruebas Unitarias son un codigo o una funcion que lo que intenta es probar que otra funcion actue como es debido, por ejemplo si tenemos una funcion
+que es Sumar, necesitamos validar que reciba 2 parametros ya sean enteros o double y devuelva lo que necesitamos de esa funcion.
+Las pruebas de Integracion lo que se intenta probar es que diferentes modulos de una plataforma funcione correctamente. Es decir como funcionan
+estos diferentes modulos en conjunto.
+
+
+Un objeto Mock es un objeto que imita el comportamiento de otro, se usa cuando necesitamos simular el comportamiento de una clase, tambien para
+confirmar el comportamiento durante la ejecucion de nuestra prueba.
+
+function dividir(a, b) { return a / b; }
+Posibles errores, el tipo de dato de a y b ya que deberian ser del mismo tipo en general.
+Que el divisor sea igual a 0, ya que se consideraria una division indefinida.
+Un buen caso de prueba seria una funcion que valide que por lo menos la contraseña tenga al menos 8 caracteres, un numero y una letra mayuscula
+por ejemplo: Password1, tambien me gustaria agregar que contenga por lo menos un caracter especial como por ejemplo un "*".
+Si cumple con esto deberia dar como resultado un Aceptado(contraseña valida).
+
+Un stub es un objeto"falso" que se utiliza para devolver respuestas predefinidas o comportamientos fijos cuando una funcion es llamada dentro de una prueba.
+Se suele utilizar cuando no necesitamos verificar cómo se comporta la dependencia (como una API externa o base de datos), sino solo asegurarnos de que la función principal
+que estamos probando se comporte correctamente cuando la dependencia devuelve una respuesta esperada.
+En cambio el mock es un objeto más sofisticado que no solo simula el comportamiento de una dependencia, sino que también verifica que ciertas interacciones ocurren durante la prueba,
+como si un método específico fue llamado, cuántas veces se llamó y con qué parámetros.
+A diferencia de los stubs, los mocks permiten verificar si la función probada está utilizando correctamente la dependencia
+(si está llamando a un método en particular, si los argumentos pasados son correctos, etc.).
